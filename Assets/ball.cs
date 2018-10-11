@@ -15,9 +15,10 @@ public class ball : MonoBehaviour {
 	}
 
 	public void ResetPosition () {
-		transform.position = new Vector3(0, 1.2f, 0);
+		transform.localPosition = new Vector3(0, 1.2f, 0);
 		var rigidbody = GetComponent<Rigidbody>();
+        rigidbody.useGravity = false;
 		rigidbody.velocity = Vector3.zero;
-    rigidbody.angularVelocity = Vector3.zero;
+        rigidbody.angularVelocity = Vector3.zero;
 	}
 }
